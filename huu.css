@@ -1,0 +1,87 @@
+/* otetaan FontAwesome 4.7 CSS-kirjasto mukaan  */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css';
+
+/* ladataan myös muutama Googlen tarjoama fonttityyppi */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+
+.ac-container {
+    /* max-width: 250px; */
+    max-width: 300px;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.ac-container label {
+    height: 30px;
+    line-height: 1.8;
+    padding: 0 10px 0 15px;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+    color: #333;
+    background: #eee;
+    border-top: 1px solid #ccc;
+}
+
+.ac-container {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.ac-container label:hover {
+    background: #ddd;
+}
+
+.ac-container .ac-alasveto input:checked+label::after {
+    font-family: 'FontAwesome';
+    /* font-size: 16px; */
+    content: '\f0d8';
+    float: right;
+    color: #942B2D;
+    /* color: green; */
+}
+
+.ac-container .ac-alasveto input+label::after {
+    font-family: 'FontAwesome';
+    content: '\f0d7';
+    float: right;
+    color: #942B2D;
+}
+
+.ac-container input {
+    display: none;
+}
+
+.ac-container article {
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+}
+
+.ac-container article p {
+    margin: 0;
+    padding: 3px 10px;
+    font-size: 14px;
+    color: #333;
+    /* line-height: 1.5; */
+}
+
+.ac-container article p:hover {
+    /* background: #C5BAA1 */
+    /* background: #eee; */
+    border: 1px solid #333;
+}
+
+.ac-container article p i.fa {
+    padding-right: 10px;
+    /* color: #942B2D; */
+    color: #777;
+}
+
+.ac-container input:checked~article {
+    height: auto;
+    border-top: 1px solid #ccc;
+}
